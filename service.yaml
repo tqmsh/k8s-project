@@ -5,7 +5,7 @@ metadata:
 spec:
   selector:
     app: hello-app
-  ports: # 1
+  ports:
     - protocol: TCP
       port: 8080
       targetPort: 8080
