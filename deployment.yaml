@@ -1,9 +1,9 @@
-apiVersion: apps/v1 # tells k8s what version of the API to use for the Deployment
-kind: Deployment # specifies that we are creating a Deployment
+apiVersion: apps/v1
+kind: Deployment
 metadata: 
-  name: hello-app # name of deployment
+  name: hello-app
 spec:
-  replicas: 1 # number of replicas (instances) of the app. We’re starting with 1
+  replicas: 1
   selector:
     matchLabels:
       app: hello-app
@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: hello-app
-          image: gcr.io/google-samples/hello-app:2.0 # defines container img (gcr.io/google-samples/hello-app:2.0) to use, and the container's port (8080).
+          image: gcr.io/google-samples/hello-app:2.0
           ports:
             - containerPort: 8080
